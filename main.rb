@@ -13,7 +13,7 @@ def main()
       sentence = generate_text(bot, tweet_source, tweet_num)
       bot.post(sentence)
       p "tweet -> " + sentence
-      sleep(600)
+      sleep(300)
     end
   end 
 
