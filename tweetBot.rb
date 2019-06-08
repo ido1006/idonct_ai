@@ -78,10 +78,13 @@ class TweetBot
     reply(sentence,user_name,status_id)
   end
 
-  def auto_follow()
+  def ffManage()
     begin
       @client.follow(
         get_follower(@screen_name) - get_friend(@screen_name)
+      )
+      @client.unfollow(
+        get_friend(@screen_name) - get_follower(@screen_name)
       )
     rescue Twitter::Error::Forbidden => error
     end

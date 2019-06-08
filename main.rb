@@ -19,7 +19,7 @@ def main()
 
   t2 = Thread.new do
     while 1 do
-      bot.auto_follow()
+      bot.ffManage()
       sleep(300)
     end
   end 
