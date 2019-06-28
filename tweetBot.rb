@@ -1,18 +1,16 @@
 # coding: utf-8
 require "twitter"
-require "yaml"
 
 class TweetBot
   attr_accessor :client
   attr_accessor :screen_name
 
   def initialize(screen_name)
-    keys = YAML.load_file('./config.yml')
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key         =keys['api_key']
-      config.consumer_secret      =keys['api_secret']
-      config.access_token         =keys['access_token']
-      config.access_token_secret  =keys['access_token_secret']
+      config.consumer_key         =ENV['api_key']
+      config.consumer_secret      =ENV['api_secret']
+      config.access_token         =ENV['access_token']
+      config.access_token_secret  =ENV['access_token_secret']
     end
 
     @screen_name = screen_name
