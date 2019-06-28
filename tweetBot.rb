@@ -7,10 +7,10 @@ class TweetBot
 
   def initialize(screen_name)
     @client = Twitter::REST::Client.new do |config|
-      config.consumer_key         =ENV['api_key']
-      config.consumer_secret      =ENV['api_secret']
-      config.access_token         =ENV['access_token']
-      config.access_token_secret  =ENV['access_token_secret']
+      config.consumer_key         =ENV['MY_CONSUMER_KEY']
+      config.consumer_secret      =ENV['MY_CONSUMER_SECRET']
+      config.access_token         =ENV['MY_ACCESS_TOKEN']
+      config.access_token_secret  =ENV['MY_ACCESS_TOKEN_SECRET']
     end
 
     @screen_name = screen_name
