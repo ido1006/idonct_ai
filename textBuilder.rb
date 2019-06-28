@@ -128,7 +128,7 @@ def generate_text(bot, screen_name, tweet_num)
   block = reduce_degree(block)
 
   #1~140字になるまでマルコフ連鎖
-  while tweet.length == 0 or tweet.length > 140 do
+  while tweet.length == 0 or tweet.length > 60 do
     begin
       tweetwords = marcov.marcov(block)
       if tweetwords == -1
