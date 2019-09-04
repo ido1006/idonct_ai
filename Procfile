@@ -1,0 +1,2 @@
+bot: ruby main.rb
+
