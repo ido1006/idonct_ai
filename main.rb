@@ -5,7 +5,7 @@ require "./textBuilder.rb"
 def main()
   bot = TweetBot.new("idonct_ai")
   tweet_source = "kKanai_" 
-  tweet_num = 50
+  tweet_num = 500
 
   while 1 do
     bot.ffManage()
