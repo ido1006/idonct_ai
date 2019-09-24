@@ -11,8 +11,8 @@ def main()
     bot.ffManage()
     sentence = generate_text(bot, tweet_source, tweet_num)
     bot.post(sentence)
-    p "tweet -> " + sentence
-    sleep(600)
+    p "tweet -> 「#{sentence}」"
+    sleep(43200)
   end
 end 
 
